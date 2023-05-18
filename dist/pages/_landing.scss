@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 20rem;
+    position: relative;
 
     &__wrapper{
         padding: 25rem 0;
@@ -24,6 +25,7 @@
 
     &__btn{
         margin-top: 2rem;
+
         ul{
             display: flex;
             flex-direction: column;
@@ -53,6 +55,58 @@
                 a{
                     font-size: 2rem;
                     color: $clr-light;
+                }
+            }
+        }
+    }
+
+    &__text{
+        box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+        background: $clr-light;
+        max-width: 150rem;
+        margin: 0 auto;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            font-size: 1.3rem;
+            font-weight: 700;
+
+            &:hover{
+                color: $clr-blue;
+            }
+
+            i{
+                margin-left: 1.5rem;
+            }
+        }
+    }
+
+    .ques{
+        position: absolute;
+        width: 100%;
+        box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+    
+        &__text{
+            max-width: 150rem;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            a{
+                font-size: 1.3rem;
+                font-weight: 700;
+    
+                &:hover{
+                    color: $clr-blue;
+                }
+    
+                i{
+                    margin-left: 1.5rem;
                 }
             }
         }
@@ -103,30 +157,38 @@
                 }
             }
         }
-    }
-}
 
-.ques{
-    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+        .ques{
+            position: absolute;
+            background: $clr-light;
 
-    &__text{
-        max-width: 150rem;
-        margin: 0 auto;
-        padding: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        a{
-            font-size: 1.3rem;
-            font-weight: 700;
-
-            &:hover{
-                color: $clr-blue;
-            }
-
-            i{
-                margin-left: 1.5rem;
+            width: 20%;
+            // top: 90rem;
+            border-radius: 2rem 0 0 0;
+            bottom: 0rem;
+            right: 0;
+            box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
+        
+            &__text{
+                max-width: 150rem;
+                margin: 0 auto;
+                padding: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+        
+                a{
+                    font-size: 1.3rem;
+                    font-weight: 700;
+        
+                    &:hover{
+                        color: $clr-blue;
+                    }
+        
+                    i{
+                        margin-left: 1.5rem;
+                    }
+                }
             }
         }
     }
@@ -178,6 +240,56 @@
         }
     }
 
+    &__policy{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        h3{
+            font-size: 3rem;
+            color: #DC8928;
+        }
+    }
+
+    &__policy__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        .at{
+            font-size: 3rem;
+            color: $clr-blue;
+            font-weight: 700;
+        }
+
+        .no{
+            font-size: 10rem;
+            color: $clr-blue;
+            line-height: .9;
+        }
+
+        .span{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            span{
+                color: $clr-blue;
+                
+                &:first-child{
+                    font-size: 5rem;
+                    line-height: .9;
+                    font-weight: 700;
+                }
+
+                &:last-child{
+                    font-size: 3rem;
+                    max-width: 20%;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
     @include mediaQuery($break-lg){
         &__title{
             display: flex;
@@ -221,11 +333,12 @@
     background: $clr-blue;
     position: relative;
 
-    &__text{
-        max-width: 150rem;
+    &__wrapper{
         margin: 0 auto;
         padding: 1.5rem;
+    }
 
+    &__text{
         h1{
             text-align: center;
             font-size: 3.5rem;
@@ -246,6 +359,10 @@
     }
 
     &__img{
+        display: none;
+    }
+    
+    i{
         display: none;
     }
 
