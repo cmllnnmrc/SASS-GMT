@@ -1,0 +1,175 @@
+.header{
+    position: relative;
+    position: fixed;
+    width: 100%;
+    background: transparent;
+
+    &.blue{
+        background: $clr-blue;
+        box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+
+        ul{
+            li{
+                a{
+                    &:hover{
+                        color: $clr-light;
+                    }
+                }
+            }
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .branding{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+            @include imgFit(20rem, 100%)
+        }
+    }
+
+    &__action{
+        ul, a{
+            display: none;
+        }
+    }
+
+    &__nav{
+        position: absolute;
+        background: $clr-light;
+        top: 0;
+        right: -100rem;
+        width: 100%;
+        height: 100vh;
+        transition: .5s ease;
+
+        &.open{
+            right: 0;
+            padding: 15rem 2rem;
+            text-align: center;
+            transition: .5s ease;
+        }
+
+        ul{
+            li{
+                margin-bottom: 3rem;
+
+                a{
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    color: $clr-dark;
+
+                    &:hover{
+                        color: $clr-blue;
+                    }
+                }
+            }
+        }
+
+        a{
+            width: 100%;
+            padding: 1.2rem 0;
+        }
+        
+    }
+
+    .toggle__menu{
+        border-radius: 5rem;
+        padding: 1rem 1rem;
+    
+       &:hover{
+        cursor: pointer;
+        border-radius: 5rem;
+        padding: 1rem 1rem;
+        background: rgba(118, 118, 118, 0.1);
+      }
+    
+      span{
+        width: 2.5rem;
+        height: .2rem;
+        background-color: $clr-light;
+        display: block;
+        border-radius: 5rem;
+        transition: .5s ease;
+
+        &:nth-child(2){
+            margin: .5rem 0;
+        }
+      }
+
+      &.open{
+        span{
+            background-color: $clr-dark;
+
+            &:first-child{
+                transform: translate(0, 9px) rotate(230deg);
+                transition: .5s ease-in;
+            }
+
+            &:nth-child(2){
+                opacity: 0;
+                transition: .5s ease-in;
+            }
+
+            &:last-child{
+                transform: translate(0, -5px) rotate(-230deg);
+                transition: .5s ease-in;  
+            }
+        }
+      }
+    }
+
+    @include mediaQuery($break-lg){
+        &__action{
+            display: flex;
+
+            ul,a{
+                display: unset;
+            }
+
+            ul{
+                display: flex;
+                align-items: center;
+                gap: 5rem;
+                li{
+                    a{
+                        font-size: 1.3rem;
+                        font-weight: 800;
+                        color: $clr-light;
+                        transition: .5s ease;
+
+                        &:hover{
+                            color: $clr-blue;
+                            transition: .5s ease;
+                        }
+                    }
+
+                    &:last-child{
+                        margin-right: 3rem;
+                    }
+                }
+            }
+
+            .btn.blue{
+                border: 2px solid $clr-light;
+                padding: 1rem 2rem;
+
+                &:hover{
+                    color: $clr-blue;
+                    background: $clr-light;
+                }
+            }
+        }
+
+        &__nav, .toggle__menu{
+            display: none;
+        }
+    }
+}

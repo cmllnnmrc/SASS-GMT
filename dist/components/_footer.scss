@@ -1,0 +1,65 @@
+.footer{
+    background: $clr-blue;
+    text-align: center;
+    padding: 4rem 0;
+
+    &__nav{
+        ul{
+            li{
+                margin-bottom: 3rem;
+                a{
+                    color: $clr-light;
+                }
+            }
+        }
+
+        .btn.white{
+            padding: 1.5rem 5rem;
+        }
+    }
+
+    p{
+        color: $clr-light;
+        font-size: 1.4rem;
+        margin: 2.5rem 0 3rem 0;
+    }
+
+    &__social{
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+
+            li{
+                a{
+                    font-size: 3rem;
+                    color: $clr-light;
+                }
+            }
+        }
+    }
+
+    @include mediaQuery($break-lg){
+        &__nav{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            ul{
+                display: flex;
+
+                li{
+                    margin-bottom: 0;
+                    margin-right: 2rem;
+                    a{
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+    
+            .btn.white{
+                padding: 1rem 5rem;
+            }
+        }
+    }
+}
