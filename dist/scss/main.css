@@ -144,8 +144,8 @@ body {
 .header__nav {
   position: absolute;
   background: #ffffff;
-  top: 0;
   right: -100rem;
+  top: 0;
   width: 100%;
   height: 100vh;
   transition: 0.5s ease;
@@ -249,11 +249,12 @@ body {
   background-image: url("../gmt-img/banner_home_v1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 20rem;
+  background-position: center;
+  min-height: 100vh;
   position: relative;
 }
 .banner__wrapper {
-  padding: 25rem 0;
+  padding: 23rem 0;
 }
 .banner__title {
   text-align: center;
@@ -315,7 +316,9 @@ body {
 }
 .banner .ques {
   position: absolute;
+  background: #ffffff;
   width: 100%;
+  bottom: 0;
   box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
 }
 .banner .ques__text {
@@ -347,7 +350,11 @@ body {
     max-width: 45%;
   }
   .banner__title h1 {
+    font-size: 5rem;
     margin-bottom: 5rem;
+  }
+  .banner__title p {
+    font-size: 2rem;
   }
   .banner__btn {
     margin: 5rem 0;
@@ -404,6 +411,9 @@ body {
   }
 }
 
+.offer {
+  padding-top: 5rem;
+}
 .offer__title {
   text-align: center;
   margin: 5rem 0;
@@ -453,7 +463,7 @@ body {
   margin-bottom: 5rem;
 }
 .offer__policy h3 {
-  font-size: 4.5rem;
+  font-size: 3.8rem;
   color: #DC8928;
 }
 .offer__policy__wrapper {
@@ -462,33 +472,34 @@ body {
   align-items: flex-start;
 }
 .offer__policy__wrapper .at {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #134A8C;
   font-weight: 700;
 }
 .offer__policy__wrapper .no {
   font-size: 15rem;
+  font-weight: 700;
   color: #134A8C;
   line-height: 0.7;
 }
 .offer__policy__wrapper .span {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
+  font-weight: 700;
 }
 .offer__policy__wrapper .span span {
   color: #134A8C;
 }
 .offer__policy__wrapper .span span:first-child {
-  font-size: 5rem;
-  line-height: 0.9;
-  font-weight: 700;
+  font-size: 7.5rem;
+  line-height: 0.8;
+  margin-bottom: 1rem;
 }
-.offer__policy__wrapper .span span:last-child {
+.offer__policy__wrapper .span span:nth-child(2), .offer__policy__wrapper .span span:last-child {
   color: #DC8928;
   font-size: 3rem;
-  max-width: 20%;
-  font-weight: 700;
+  line-height: 1;
 }
 @media screen and (min-width: 1080px) {
   .offer__title {
@@ -523,7 +534,7 @@ body {
     display: block;
   }
   .offer__policy h3 {
-    font-size: 5rem;
+    font-size: 3.7rem;
   }
   .offer__policy__wrapper .at {
     font-size: 5rem;

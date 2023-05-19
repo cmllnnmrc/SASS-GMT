@@ -2,11 +2,12 @@
     background-image: url("../gmt-img/banner_home_v1.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 20rem;
+    background-position: center;
+    min-height: 100vh;
     position: relative;
 
     &__wrapper{
-        padding: 25rem 0;
+        padding: 23rem 0;
     }
 
     &__title{
@@ -86,7 +87,9 @@
 
     .ques{
         position: absolute;
+        background: $clr-light;
         width: 100%;
+        bottom: 0;
         box-shadow: 5px 0 20px rgba(0, 0, 0, 0.1);
     
         &__text{
@@ -124,7 +127,12 @@
             max-width: 45%;
 
             h1{
+                font-size: 5rem;
                 margin-bottom: 5rem;
+            }
+
+            p{
+                font-size: 2rem;
             }
         }
 
@@ -199,6 +207,8 @@
 }
 
 .offer{
+    padding-top: 5rem;
+
     &__title{
         text-align: center;
         margin: 5rem 0;
@@ -250,7 +260,7 @@
         margin-bottom: 5rem;
         
         h3{
-            font-size: 4.5rem;
+            font-size: 3.8rem;
             color: #DC8928;
         }
     }
@@ -261,13 +271,14 @@
         align-items: flex-start;
 
         .at{
-            font-size: 3rem;
+            font-size: 4rem;
             color: $clr-blue;
             font-weight: 700;
         }
 
         .no{
             font-size: 15rem;
+            font-weight: 700;
             color: $clr-blue;
             line-height: .7;
         }
@@ -275,22 +286,22 @@
         .span{
             display: flex;
             flex-direction: column;
-            align-items: start;
+            align-items: center;
+            font-weight: 700;
 
             span{
                 color: $clr-blue;
                 
                 &:first-child{
-                    font-size: 5rem;
-                    line-height: .9;
-                    font-weight: 700;
+                    font-size: 7.5rem;
+                    line-height: .8;
+                    margin-bottom: 1rem;
                 }
 
-                &:last-child{
+                &:nth-child(2), &:last-child{
                     color: #DC8928;
                     font-size: 3rem;
-                    max-width: 20%;
-                    font-weight: 700;
+                    line-height: 1;
                 }
             }
         }
@@ -333,7 +344,7 @@
 
         &__policy{  
             h3{
-                font-size: 5rem;
+                font-size: 3.7rem;
             }
         }
 
