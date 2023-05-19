@@ -402,10 +402,6 @@
             }
         }
     }
-
-    &__img{
-        display: none;
-    }
     
     i{
         display: none;
@@ -419,21 +415,30 @@
     }
 
     @include mediaQuery($break-lg){
+        &__content{
+            display: grid;
+            grid-template-columns: 1.5fr 2fr;
+        }
         &__img{
-            display: unset;
-
-            img{
-                @include imgFit(100%, 100%)
-            }
+            background-image: url("../gmt-img/about.jpg");
+            background-size: cover;
+            min-height: 60rem;
+            position: relative;
         }
 
         &__wrapper{
-            max-width: 70rem;
-            margin: 0 auto;
-            padding: 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+        }
+
+        &__text{
+            max-width: 150rem;
+            margin: 0 auto;
+            padding: 1.5rem;
+
+            padding: 0 20rem;
         }
 
         i{
@@ -441,7 +446,7 @@
             display: unset;
             font-size: 10rem;
             top: 25rem;
-            left: 82rem;
+            left: 77rem;
             color: $clr-blue;
         }
 
